@@ -126,6 +126,10 @@ function validateInput(text){
         return false;
     }
 
+     // Adicionalmente, validamos que no haya letras acentuadas
+     if (/[áéíóúñü]/.test(text)) {
+        return false;
+    }
 
     return true
     
