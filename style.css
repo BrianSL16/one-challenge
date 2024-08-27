@@ -224,6 +224,13 @@ textarea:focus {
 
 @media (max-width: 1080px) {
     
+    body{
+        
+
+        height: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
     
     header img{
         width: 48px;
