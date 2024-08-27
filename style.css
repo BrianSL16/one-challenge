@@ -365,7 +365,21 @@ textarea:focus {
         
     }
   
+    body{
+   
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+    }
+
+    main{
+        width: 90%;
+    }
     
+
     
 
 
