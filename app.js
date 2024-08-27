@@ -120,7 +120,8 @@ function validateInput(text){
         return false
     }
 
-    let regex = /^[a-z]+$/;
+    //let regex = /^[a-z]+$/;
+    let regex = /^[a-z\s\W]*$/;
     if (!regex.test(text)) {
         return false;
     }
