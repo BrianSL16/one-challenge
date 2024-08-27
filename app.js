@@ -36,7 +36,7 @@ function showEncriptedText(text){
 
     copyTextButton.addEventListener("click", ()=>{
 
-        var textToCopy = text
+        let textToCopy = text
 
         navigator.clipboard.writeText(textToCopy)
 
@@ -89,6 +89,8 @@ function encriptValue(){
 }
 
 
+
+
 function desencriptText(){
     const inputText = document.querySelector("textarea")
     const value = inputText.value
@@ -100,7 +102,7 @@ function desencriptText(){
         .replace(/imes/g, "i")
         .replace(/ai/g, "a")
         .replace(/ober/g, "o")
-        .replace(/ufat/g, "u");
+        .replace(/ufat/g, "u")
 
         deleteContent()
         showEncriptedText(decryptedText)
@@ -114,22 +116,18 @@ function desencriptText(){
 }
 
 
+
 function validateInput(text){
 
     if(text.length === 0){
         return false
     }
+    let regex = /^[a-z\s]*$/;
 
-    //let regex = /^[a-z]+$/;
-    let regex = /^[a-z\s\W]*$/;
     if (!regex.test(text)) {
         return false;
     }
 
-     // Adicionalmente, validamos que no haya letras acentuadas
-     if (/[áéíóúñü]/.test(text)) {
-        return false;
-    }
 
     return true
     
